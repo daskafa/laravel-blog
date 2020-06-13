@@ -40,11 +40,12 @@ use Illuminate\Support\Facades\Route;
     Route::get('/sayfa/sil/{id}', 'Back\PageController@delete')->name('page.delete');
     Route::get('/sayfa/siralama', 'Back\PageController@orders')->name('page.orders');
 
-
+    // Config's route
+    Route::get('/ayarlar', 'Back\ConfigController@index')->name('config.index');
+    Route::post('/ayarlar/update', 'Back\ConfigController@update')->name('config.update');
 
 
     //
-    Route::get('/ayarlar', 'Back\ConfigController@index')->name('config.index');
     Route::get('cikis', 'Back\AuthController@logout')->name('logout');
   });
 
