@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Route;
   Backend Routes
 |--------------------------------------------------------------------------
 */
+
+  Route::get('site-bakimda',function(){
+    return view('front.offline');
+  });
+
   Route::prefix('admin')->name('admin.')->middleware('isLogin')->group(function(){
     Route::get('giris', 'Back\AuthController@login')->name('login');
     Route::post('giris', 'Back\AuthController@loginPost')->name('login.post');
