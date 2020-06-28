@@ -8,7 +8,7 @@
         </h2>
         <img style="width:100%; height:20em; object-fit:cover;" src="{{$article->image}}" alt="">
         <h3 class="post-subtitle">
-            {{Str::limit($article->content, 50, ' ..')}}
+            {!! Str::limit($article->content, 50, ' ..') !!}
         </h3>
     </a>
     <p class="post-meta"> Kategori:
